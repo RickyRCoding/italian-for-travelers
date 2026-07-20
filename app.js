@@ -359,6 +359,7 @@ let state = {
   quizAnswers: [],
   activeFilter: 'all',
   searchQuery: '',
+  studyMode: 'it-to-en', // 'it-to-en' or 'en-to-it'
   // Multiple quiz tracking
   currentQuizType: 'mod1', // 'mod1', 'mod2', 'mod3', or 'scenario'
   currentQuizQuestions: [],
@@ -402,6 +403,8 @@ function initDOMElements() {
     nextCardBtn: document.getElementById('next-card-btn'),
     cardIndexIndicator: document.getElementById('card-index-indicator'),
     markMasteredBtn: document.getElementById('mark-mastered-btn'),
+    modeItToEnBtn: document.getElementById('mode-it-to-en-btn'),
+    modeEnToItBtn: document.getElementById('mode-en-to-it-btn'),
     
     // Quiz UI
     quizBody: document.getElementById('quiz-body'),
@@ -423,6 +426,7 @@ function loadState() {
       state.completedModules = parsed.completedModules || [];
       state.cardsStudied = parsed.cardsStudied || {};
       state.theme = parsed.theme || 'light';
+      state.studyMode = parsed.studyMode || 'it-to-en';
       state.quizScores = parsed.quizScores || {
         mod1: 0,
         mod2: 0,
@@ -444,6 +448,7 @@ function saveState() {
     completedModules: state.completedModules,
     cardsStudied: state.cardsStudied,
     theme: state.theme,
+    studyMode: state.studyMode,
     quizScores: state.quizScores
   }));
   updateGlobalProgressUI();
@@ -589,14 +594,27 @@ function renderFlashcardModule() {
     elements.moduleSubtitle.innerText = "Order coffee and food, request the bill, and express urgent safety/medical requests.";
   }
   
+  // Update study mode active button styles
+  if (elements.modeItToEnBtn && elements.modeEnToItBtn) {
+    if (state.studyMode === 'it-to-en') {
+      elements.modeItToEnBtn.classList.add('active');
+      elements.modeEnToItBtn.classList.remove('active');
+    } else {
+      elements.modeItToEnBtn.classList.remove('active');
+      elements.modeEnToItBtn.classList.add('active');
+    }
+  }
+  
+  const isItToEn = state.studyMode === 'it-to-en';
+  
   // Render card text
   elements.cardFaceFront.innerHTML = `
     <div class="card-header-meta">
       <span class="card-badge">${currentCard.category}</span>
       <span>${state.currentCardIndex + 1} of ${activePhrases.length}</span>
     </div>
-    <div class="card-phrase">${currentCard.phrase}</div>
-    <div class="card-phonetic">"${currentCard.phonetic}"</div>
+    <div class="card-phrase">${isItToEn ? currentCard.phrase : currentCard.translation}</div>
+    ${isItToEn ? `<div class="card-phonetic">"${currentCard.phonetic}"</div>` : ''}
     <div class="card-hint">
       <span>💡 Tap card to flip</span>
     </div>
@@ -611,7 +629,8 @@ function renderFlashcardModule() {
       <span class="card-badge">${currentCard.category}</span>
       <span>${state.currentCardIndex + 1} of ${activePhrases.length}</span>
     </div>
-    <div class="card-translation">${currentCard.translation}</div>
+    <div class="card-translation">${isItToEn ? currentCard.translation : currentCard.phrase}</div>
+    ${!isItToEn ? `<div class="card-phonetic" style="font-size: 1.3rem; font-weight: 500; color: var(--text-muted); margin-bottom: 12px; margin-top: -8px;">"${currentCard.phonetic}"</div>` : ''}
     <div class="card-tip-container">
       <strong>Cultural Tip:</strong> ${currentCard.tip}
     </div>
@@ -652,6 +671,21 @@ function setupFlashcards() {
       renderFlashcardModule();
     }
   });
+  
+  // Study Mode Toggle Buttons
+  if (elements.modeItToEnBtn && elements.modeEnToItBtn) {
+    elements.modeItToEnBtn.addEventListener('click', () => {
+      state.studyMode = 'it-to-en';
+      saveState();
+      renderFlashcardModule();
+    });
+    
+    elements.modeEnToItBtn.addEventListener('click', () => {
+      state.studyMode = 'en-to-it';
+      saveState();
+      renderFlashcardModule();
+    });
+  }
   
   // Mark mastered toggle
   elements.markMasteredBtn.addEventListener('click', (e) => {
