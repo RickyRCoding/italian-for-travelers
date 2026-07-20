@@ -572,27 +572,6 @@ header .header-content {
   margin-top: 4px;
 }
 
-.card-audio-btn {
-  background-color: var(--primary-green);
-  color: white;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  font-size: 1.3rem;
-  cursor: pointer;
-  transition: var(--transition-smooth);
-  box-shadow: var(--shadow-sm);
-}
-
-.card-audio-btn:hover {
-  transform: scale(1.1);
-  background-color: var(--primary-green-hover);
-}
-
 /* Back Face Elements */
 .card-translation {
   font-size: 1.8rem;
@@ -937,27 +916,6 @@ header .header-content {
   padding-top: 6px;
 }
 
-.cheatsheet-actions {
-  display: flex;
-  gap: 8px;
-}
-
-.cheatsheet-audio-btn {
-  background: none;
-  border: none;
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  cursor: pointer;
-  padding: 4px;
-  border-radius: 50%;
-  transition: var(--transition-smooth);
-}
-
-.cheatsheet-audio-btn:hover {
-  color: var(--primary-green);
-  background-color: var(--bg-cream-dark);
-  transform: scale(1.1);
-}
 
 .no-results {
   grid-column: 1 / -1;

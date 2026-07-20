@@ -401,7 +401,6 @@ function initDOMElements() {
     prevCardBtn: document.getElementById('prev-card-btn'),
     nextCardBtn: document.getElementById('next-card-btn'),
     cardIndexIndicator: document.getElementById('card-index-indicator'),
-    listenCardBtn: document.getElementById('listen-card-btn'),
     markMasteredBtn: document.getElementById('mark-mastered-btn'),
     
     // Quiz UI
@@ -414,31 +413,6 @@ function initDOMElements() {
   };
 }
 
-// Speech Synthesis Loader & Helper
-let voicesLoaded = false;
-window.speechSynthesis.onvoiceschanged = () => {
-  voicesLoaded = true;
-};
-
-function playTTS(text) {
-  if (!window.speechSynthesis) {
-    alert("Sorry, your browser does not support text-to-speech audio.");
-    return;
-  }
-  
-  window.speechSynthesis.cancel(); // stop current speech
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = 'it-IT';
-  utterance.rate = 0.85; // Slow down slightly for easier comprehension
-  
-  const voices = window.speechSynthesis.getVoices();
-  const italianVoice = voices.find(v => v.lang.startsWith('it'));
-  if (italianVoice) {
-    utterance.voice = italianVoice;
-  }
-  
-  window.speechSynthesis.speak(utterance);
-}
 
 // Load State from LocalStorage
 function loadState() {
@@ -659,11 +633,7 @@ function renderFlashcardModule() {
 
 function setupFlashcards() {
   // Flip card on click
-  elements.flashcard.addEventListener('click', (e) => {
-    // If clicked the TTS play button, do not flip card
-    if (e.target.closest('#listen-card-btn') || e.target.closest('.card-audio-btn')) {
-      return;
-    }
+  elements.flashcard.addEventListener('click', () => {
     elements.flashcardWrapper.classList.toggle('flipped');
   });
   
@@ -681,16 +651,6 @@ function setupFlashcards() {
       state.currentCardIndex++;
       renderFlashcardModule();
     }
-  });
-  
-  // Audio playback
-  elements.listenCardBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    const activePhrases = phrases.filter(p => p.module === state.currentModule);
-    const currentCard = activePhrases[state.currentCardIndex];
-    // Strip slashes/alternative options from string for better pronunciations
-    const audioText = currentCard.phrase.split('/')[0].trim();
-    playTTS(audioText);
   });
   
   // Mark mastered toggle
@@ -1054,18 +1014,7 @@ function renderCheatsheet() {
         <div class="cheatsheet-translation">${p.translation}</div>
         <div class="cheatsheet-tip">${p.tip}</div>
       </div>
-      <div class="cheatsheet-actions">
-        <button class="cheatsheet-audio-btn" title="Listen Audio">🔊</button>
-      </div>
     `;
-    
-    // Bind click to pronunciation play button
-    const audioBtn = card.querySelector('.cheatsheet-audio-btn');
-    audioBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const audioText = p.phrase.split('/')[0].trim();
-      playTTS(audioText);
-    });
     
     elements.cheatsheetGrid.appendChild(card);
   });
