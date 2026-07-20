@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciao Italia! - Italian Travel Phrase Survival Guide</title>
+  <meta name="description" content="Learn critical Italian travel phrases in under 3 hours. Greetings, ordering, directions, and emergency vocabulary with interactive audio and quiz.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="container header-content">
+      <div class="logo">
+        <span class="logo-icon">🇮🇹</span>
+        <span class="logo-text">Ciao Italia!</span>
+      </div>
+      
+      <div class="nav-controls">
+        <!-- 3-Hour Progress Tracker -->
+        <div class="header-progress" title="Overall cards mastered towards your flight plan">
+          <span>Flight Prep:</span>
+          <div class="progress-bar-mini">
+            <div class="progress-fill-mini" id="mini-progress-fill"></div>
+          </div>
+          <span id="mini-progress-text">0%</span>
+        </div>
+        
+        <!-- Dark Mode Toggle -->
+        <button class="btn btn-outline btn-icon" id="theme-toggle" aria-label="Toggle Theme">
+          <span id="theme-toggle-icon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="flex-grow: 1; padding-bottom: 40px;">
+    
+    <!-- Tab Controls Navigation -->
+    <nav class="tabs" role="tablist">
+      <button class="tab-btn active" data-tab="flight-plan" role="tab" aria-selected="true">✈️ Flight Plan</button>
+      <button class="tab-btn" data-tab="learn" role="tab" aria-selected="false">📚 Learn Modules</button>
+      <button class="tab-btn" data-tab="quiz" role="tab" aria-selected="false">🏁 Scenario Quizzes</button>
+      <button class="tab-btn" data-tab="cheatsheet" role="tab" aria-selected="false">📋 Quick Cheatsheet</button>
+    </nav>
+
+    <!-- TAB 1: FLIGHT PLAN (DASHBOARD) -->
+    <section id="flight-plan" class="tab-content active" role="tabpanel">
+      <div class="flight-plan-hero">
+        <h1>Benvenuto in Italia!</h1>
+        <p>You're leaving in 2 days. This interactive web app is your 3-hour crash course to navigate Italy with confidence. Master greetings, directions, café ordering, and safety essentials in three short blocks.</p>
+        
+        <!-- Quick Summary Stats -->
+        <div class="flight-plan-stats">
+          <div class="stat-item">
+            <span class="stat-val" id="stat-study-progress">0%</span>
+            <span class="stat-lbl">Course Progress</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val" id="stat-cards-mastered">0/30</span>
+            <span class="stat-lbl">Phrases Mastered</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-val" id="stat-quiz-highscore">0/5</span>
+            <span class="stat-lbl">Quiz High Score</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course timeline/modules -->
+      <h2 style="font-family: var(--font-serif); margin-bottom: 24px; font-size: 1.8rem; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">Your 3-Hour Roadmap</h2>
+      
+      <div class="timeline">
+        <!-- Module 1 Card -->
+        <div class="timeline-card" id="timeline-mod1">
+          <span class="timeline-badge">Module 1</span>
+          <h3>Hour 1: Greetings &amp; Basic Manners</h3>
+          <p>Learn how to greet locals politely depending on the time of day, say please/thank you, apologize, and ask if they speak English.</p>
+          <div class="timeline-meta">
+            <span>⏱️ 60 Mins</span>
+            <button class="btn btn-primary start-module-btn" data-module="1">Study Cards</button>
+          </div>
+        </div>
+
+        <!-- Module 2 Card -->
+        <div class="timeline-card" id="timeline-mod2">
+          <span class="timeline-badge">Module 2</span>
+          <h3>Hour 2: Directions &amp; Navigation</h3>
+          <p>Navigate airports and city centers. Master asking where the restroom, train station, hotel, or pharmacy is, and understand left vs. right.</p>
+          <div class="timeline-meta">
+            <span>⏱️ 60 Mins</span>
+            <button class="btn btn-primary start-module-btn" data-module="2">Study Cards</button>
+          </div>
+        </div>
+
+        <!-- Module 3 Card -->
+        <div class="timeline-card" id="timeline-mod3">
+          <span class="timeline-badge">Module 3</span>
+          <h3>Hour 3: Dining &amp; Safety Emergencies</h3>
+          <p>Order food and coffee like a local at a bar or restaurant, request the check, and learn emergency phrases in case you need help.</p>
+          <div class="timeline-meta">
+            <span>⏱️ 60 Mins</span>
+            <button class="btn btn-primary start-module-btn" data-module="3">Study Cards</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: LEARN MODULES (FLASHCARDS) -->
+    <section id="learn" class="tab-content" role="tabpanel">
+      <div class="module-container">
+        
+        <!-- Sidebar Navigation for Modules -->
+        <aside class="sidebar-nav">
+          <h4 class="sidebar-title">Select Module</h4>
+          <ul class="sidebar-list">
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link active" data-module="1">
+                <span>Module 1: Greetings</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link" data-module="2">
+                <span>Module 2: Directions</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link" data-module="3">
+                <span>Module 3: Food &amp; Help</span>
+              </a>
+            </li>
+          </ul>
+        </aside>
+
+        <!-- Flashcards study desk -->
+        <div class="learn-content">
+          <div class="module-header">
+            <h2 id="module-title">Module 1: Greetings &amp; Essentials</h2>
+            <p id="module-subtitle">Focus on basic greetings, politeness, and establishing basic English-Italian clarity.</p>
+          </div>
+
+          <!-- Flashcard widget -->
+          <div class="flashcard-wrapper" id="flashcard-wrapper">
+            <div class="flashcard" id="flashcard">
+              <!-- Front Face (Italian) -->
+              <div class="card-face card-front" id="card-front">
+                <!-- Javascript will populate this -->
+              </div>
+              
+              <!-- Back Face (English Translation) -->
+              <div class="card-face card-back" id="card-back">
+                <!-- Javascript will populate this -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Flashcard Control Bar -->
+          <div class="card-controls">
+            <button class="btn btn-outline" id="prev-card-btn" aria-label="Previous Phrase">← Prev</button>
+            
+            <button class="card-audio-btn" id="listen-card-btn" title="Pronounce Phrase" aria-label="Play pronunciation audio">
+              🔊
+            </button>
+            
+            <button class="btn btn-outline" id="next-card-btn" aria-label="Next Phrase">Next →</button>
+          </div>
+          
+          <div style="display:flex; justify-content:space-between; align-items:center; max-width:550px; margin: 0 auto; width:100%;">
+            <span class="card-index-indicator" id="card-index-indicator">1 / 10</span>
+            <button class="btn btn-outline" id="mark-mastered-btn">Mark Mastered</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: SCENARIO QUIZZES -->
+    <section id="quiz" class="tab-content" role="tabpanel">
+      <div class="quiz-container">
+        <h2 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 12px; text-align: center;">Travel Practice Quizzes</h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">Test your knowledge! Choose a 15-question translation quiz per module, or try our scenario-based final test.</p>
+        
+        <div id="quiz-body">
+          <!-- Javascript will render quiz selector dashboard or current quiz here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: QUICK CHEATSHEET -->
+    <section id="cheatsheet" class="tab-content" role="tabpanel">
+      <div class="cheatsheet-header">
+        <!-- Search Input -->
+        <div class="search-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-input" class="search-input" placeholder="Search phrase or English translation...">
+        </div>
+        
+        <!-- Category Filters -->
+        <div class="filter-wrapper">
+          <button class="filter-badge active" data-filter="all">All</button>
+          <button class="filter-badge" data-filter="greetings">Greetings</button>
+          <button class="filter-badge" data-filter="directions">Directions</button>
+          <button class="filter-badge" data-filter="dining">Dining</button>
+          <button class="filter-badge" data-filter="help">Help</button>
+        </div>
+      </div>
+
+      <!-- Phrases Grid -->
+      <div class="cheatsheet-grid" id="cheatsheet-grid">
+        <!-- JavaScript will populate cheatsheet cards here -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>🇮🇹 Ciao Italia! Italian Travel Survival Guide.</p>
+      <p style="font-size: 0.8rem; margin-top: 6px; color: var(--text-muted);">Programmed in Mac. Good luck on your travels! Buon viaggio! ✈️</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
