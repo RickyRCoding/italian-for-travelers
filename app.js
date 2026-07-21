@@ -276,6 +276,456 @@ const phrases = [
     category: "Help",
     module: 3,
     tip: "Emergency command to direct bystanders to contact authorities."
+  },
+  {
+    id: 31,
+    phrase: "Quanto costa questo?",
+    phonetic: "KWAHN-toh KAWS-tah KWEHS-toh?",
+    translation: "How much is this?",
+    category: "Shopping",
+    module: 4,
+    tip: "Point at any specific item on display to ask its price."
+  },
+  {
+    id: 32,
+    phrase: "Posso pagare con la carta?",
+    phonetic: "PAWS-soh pah-GAH-reh kohn lah KAR-tah?",
+    translation: "Can I pay by card?",
+    category: "Shopping",
+    module: 4,
+    tip: "Visa and Mastercard are widely accepted, but checking first is appreciated for small amounts."
+  },
+  {
+    id: 33,
+    phrase: "Solo contanti",
+    phonetic: "SOH-loh kohn-TAHN-tee",
+    translation: "Cash only",
+    category: "Shopping",
+    module: 4,
+    tip: "Commonly seen on signs in smaller cafes, bakeries, or street vendors."
+  },
+  {
+    id: 34,
+    phrase: "È troppo caro",
+    phonetic: "eh TROP-poh KAH-roh",
+    translation: "It is too expensive",
+    category: "Shopping",
+    module: 4,
+    tip: "Useful at street markets where friendly bargaining is expected, but not in regular stores."
+  },
+  {
+    id: 35,
+    phrase: "Uno sconto, per favore?",
+    phonetic: "OO-noh SKOHN-toh pehr fah-VOH-reh?",
+    translation: "A discount, please?",
+    category: "Shopping",
+    module: 4,
+    tip: "Use this politely when buying multiple items in open-air markets."
+  },
+  {
+    id: 36,
+    phrase: "Dov'è un bancomat?",
+    phonetic: "doh-VEH oon BAHN-koh-maht?",
+    translation: "Where is an ATM?",
+    category: "Shopping",
+    module: 4,
+    tip: "'Bancomat' is the Italian word for ATM. Stick to bank branches to avoid high tourist fees."
+  },
+  {
+    id: 37,
+    phrase: "Il resto",
+    phonetic: "eel REHS-toh",
+    translation: "The change",
+    category: "Shopping",
+    module: 4,
+    tip: "For cash transactions, use: 'Il mio resto, per favore' (My change, please)."
+  },
+  {
+    id: 38,
+    phrase: "Lo prendo",
+    phonetic: "loh PREHN-doh",
+    translation: "I'll take it",
+    category: "Shopping",
+    module: 4,
+    tip: "Use this to let a seller know you have decided to purchase the item."
+  },
+  {
+    id: 39,
+    phrase: "La ricevuta, per favore",
+    phonetic: "lah ree-cheh-VOO-tah pehr fah-VOH-reh",
+    translation: "The receipt, please",
+    category: "Shopping",
+    module: 4,
+    tip: "By law, businesses must print a receipt (scontrino) for every transaction."
+  },
+  {
+    id: 40,
+    phrase: "Basta così, grazie",
+    phonetic: "BAHS-tah koh-ZEE, GRAHT-tsyeh",
+    translation: "That's all, thank you",
+    category: "Shopping",
+    module: 4,
+    tip: "Tell this to market vendors or deli counters when you've finished ordering."
+  },
+  {
+    id: 41,
+    phrase: "Ho una prenotazione",
+    phonetic: "oh OO-nah preh-noh-taht-tsyoh-neh",
+    translation: "I have a reservation",
+    category: "Hotel",
+    module: 5,
+    tip: "Handy at hotel reception desks when checking in."
+  },
+  {
+    id: 42,
+    phrase: "A che ora è la colazione?",
+    phonetic: "ah keh OH-rah eh lah koh-laht-tsyoh-neh?",
+    translation: "What time is breakfast?",
+    category: "Hotel",
+    module: 5,
+    tip: "Typically served from 7:00 AM to 10:00 AM. Inquire about the breakfast room location too."
+  },
+  {
+    id: 43,
+    phrase: "Qual è la password del Wi-Fi?",
+    phonetic: "kwahl eh lah PAHS-wohrd del WEE-FEE?",
+    translation: "What is the Wi-Fi password?",
+    category: "Hotel",
+    module: 5,
+    tip: "Pronounce Wi-Fi as 'wee-fee' in Italian, not 'why-fy'."
+  },
+  {
+    id: 44,
+    phrase: "La chiave, per favore",
+    phonetic: "lah KYAH-veh pehr fah-VOH-reh",
+    translation: "The key, please",
+    category: "Hotel",
+    module: 5,
+    tip: "Ask for your physical or electronic room key at the lobby desk."
+  },
+  {
+    id: 45,
+    phrase: "C'è un problema in camera",
+    phonetic: "cheh oon proh-BLEH-mah een KAH-meh-rah",
+    translation: "There is a problem in the room",
+    category: "Hotel",
+    module: 5,
+    tip: "Use this to notify reception about plumbing, light, or appliance issues."
+  },
+  {
+    id: 46,
+    phrase: "L'aria condizionata non funziona",
+    phonetic: "lah-ryah kohn-deet-tsyoh-NAH-tah nohn foon-TSYOH-nah",
+    translation: "The air conditioning doesn't work",
+    category: "Hotel",
+    module: 5,
+    tip: "Essential in historic stone buildings during hot Italian summer months."
+  },
+  {
+    id: 47,
+    phrase: "Posso lasciare i bagagli qui?",
+    phonetic: "PAWS-soh lah-SHAH-reh ee bah-GAHL-yee kwee?",
+    translation: "Can I leave my bags here?",
+    category: "Hotel",
+    module: 5,
+    tip: "Perfect for storing luggage after check-out before a late train or flight."
+  },
+  {
+    id: 48,
+    phrase: "Vorrei fare il check-out",
+    phonetic: "vohr-RAY FAH-reh eel check-out",
+    translation: "I would like to check out",
+    category: "Hotel",
+    module: 5,
+    tip: "Standard checkout is normally between 10:00 AM and 11:00 AM."
+  },
+  {
+    id: 49,
+    phrase: "Un asciugamano in più",
+    phonetic: "oon ah-shoo-gah-MAH-noh een pyoo",
+    translation: "An extra towel",
+    category: "Hotel",
+    module: 5,
+    tip: "'Un asciugamano in più, per favore' (An extra towel, please)."
+  },
+  {
+    id: 50,
+    phrase: "Mi può chiamare un taxi?",
+    phonetic: "mee pwoh kyah-MAH-reh oon TAHK-see?",
+    translation: "Can you call me a taxi?",
+    category: "Hotel",
+    module: 5,
+    tip: "Taxis in Italy cannot easily be hailed on the street; hotels will telephone them for you."
+  },
+  {
+    id: 51,
+    phrase: "Vorrei un biglietto per...",
+    phonetic: "vohr-RAY oon beel-YEHT-toh pehr...",
+    translation: "I would like a ticket to...",
+    category: "Transit",
+    module: 6,
+    tip: "Standard purchasing phrase at station ticket windows or automated kiosks."
+  },
+  {
+    id: 52,
+    phrase: "Solo andata o andata e ritorno?",
+    phonetic: "SOH-loh ahn-DAH-tah oh ahn-DAH-tah eh ree-TOR-noh?",
+    translation: "One-way or round trip?",
+    category: "Transit",
+    module: 6,
+    tip: "The agent will ask this. Respond with 'Solo andata' or 'Andata e ritorno'."
+  },
+  {
+    id: 53,
+    phrase: "Da quale binario parte?",
+    phonetic: "dah KWAH-leh bee-NAH-ryoh PAR-teh?",
+    translation: "From which platform does it leave?",
+    category: "Transit",
+    module: 6,
+    tip: "'Binario' is the platform number. Check the boards (Partenze) at the station before boarding."
+  },
+  {
+    id: 54,
+    phrase: "È questo il treno per...?",
+    phonetic: "eh KWEHS-toh eel TREH-noh pehr...?",
+    translation: "Is this the train to...?",
+    category: "Transit",
+    module: 6,
+    tip: "Double-check with people on the platform or fellow passengers before stepping inside."
+  },
+  {
+    id: 55,
+    phrase: "Devo convalidare il biglietto?",
+    phonetic: "DEH-voh kohn-vah-lee-DAH-reh eel beel-YEHT-toh?",
+    translation: "Do I need to validate the ticket?",
+    category: "Transit",
+    module: 6,
+    tip: "WARNING: You must validate paper tickets in green/yellow stampers on platforms before boarding, or face heavy fines!"
+  },
+  {
+    id: 56,
+    phrase: "La prossima fermata",
+    phonetic: "lah PROHS-see-mah fehr-MAH-tah",
+    translation: "The next stop",
+    category: "Transit",
+    module: 6,
+    tip: "Listen for transit announcements: 'La prossima fermata è...'"
+  },
+  {
+    id: 57,
+    phrase: "A che ora arriva?",
+    phonetic: "ah keh OH-rah ar-REE-vah?",
+    translation: "What time does it arrive?",
+    category: "Transit",
+    module: 6,
+    tip: "Use this to ask the train conductor or a nearby passenger."
+  },
+  {
+    id: 58,
+    phrase: "È libero questo posto?",
+    phonetic: "eh LEE-beh-roh KWEHS-toh POHS-toh?",
+    translation: "Is this seat free?",
+    category: "Transit",
+    module: 6,
+    tip: "A polite way to ask before sitting down next to someone on public transit."
+  },
+  {
+    id: 59,
+    phrase: "Dov'è la fermata dell'autobus?",
+    phonetic: "doh-VEH la fehr-MAH-tah del-OW-toh-boos?",
+    translation: "Where is the bus stop?",
+    category: "Transit",
+    module: 6,
+    tip: "Look for vertical signs on sidewalks labeled 'Fermata'."
+  },
+  {
+    id: 60,
+    phrase: "Un biglietto dell'autobus, per favore",
+    phonetic: "oon beel-YEHT-toh del-OW-toh-boos pehr fah-VOH-reh",
+    translation: "A bus ticket, please",
+    category: "Transit",
+    module: 6,
+    tip: "Buy tickets *before* boarding at tobacco shops (marked with a blue 'T'). Drivers do not sell tickets."
+  },
+  {
+    id: 61,
+    phrase: "Mi chiamo...",
+    phonetic: "mee KYAH-moh...",
+    translation: "My name is...",
+    category: "Social",
+    module: 7,
+    tip: "State your name clearly to introduce yourself: 'Mi chiamo Marco.'"
+  },
+  {
+    id: 62,
+    phrase: "Come si chiama?",
+    phonetic: "KOH-meh see KYAH-mah?",
+    translation: "What is your name? (formal)",
+    category: "Social",
+    module: 7,
+    tip: "The polite formal way to ask a local person their name."
+  },
+  {
+    id: 63,
+    phrase: "Piacere di conoscerti",
+    phonetic: "pyah-CHEH-reh dee koh-NOH-shehr-tee",
+    translation: "Nice to meet you",
+    category: "Social",
+    module: 7,
+    tip: "Can be shortened to simply 'Piacere' (Pleasure) while shaking hands."
+  },
+  {
+    id: 64,
+    phrase: "Di dove sei?",
+    phonetic: "dee DOH-veh say?",
+    translation: "Where are you from?",
+    category: "Social",
+    module: 7,
+    tip: "Common friendly question locals might ask. Respond with 'Sono...' (I am...)"
+  },
+  {
+    id: 65,
+    phrase: "Sono americano / canadese / inglese",
+    phonetic: "SOH-noh ah-meh-ree-KAH-noh / kah-nah-DEH-zeh / een-GLEH-zeh",
+    translation: "I am American / Canadian / British",
+    category: "Social",
+    module: 7,
+    tip: "Adjust according to your nationality. Use 'americana' if you are female."
+  },
+  {
+    id: 66,
+    phrase: "Come va?",
+    phonetic: "KOH-meh vah?",
+    translation: "How's it going?",
+    category: "Social",
+    module: 7,
+    tip: "A casual friendly check-in when speaking to peers, guides, or restaurant servers."
+  },
+  {
+    id: 67,
+    phrase: "Tutto bene, grazie",
+    phonetic: "TOOT-toh BEH-neh, GRAHT-tsyeh",
+    translation: "All good, thank you",
+    category: "Social",
+    module: 7,
+    tip: "The standard positive response to 'Come va?' or 'Come stai?'."
+  },
+  {
+    id: 68,
+    phrase: "Ti piace l'Italia?",
+    phonetic: "tee PYAH-cheh leet-TAH-lyah?",
+    translation: "Do you like Italy?",
+    category: "Social",
+    module: 7,
+    tip: "Say 'Sì, mi piace moltissimo!' (Yes, I like it very much!)."
+  },
+  {
+    id: 69,
+    phrase: "Mi piace molto",
+    phonetic: "mee PYAH-cheh MOHL-toh",
+    translation: "I like it very much",
+    category: "Social",
+    module: 7,
+    tip: "Express appreciation for food, sites, views, or general experiences."
+  },
+  {
+    id: 70,
+    phrase: "Arrivederci",
+    phonetic: "ahr-ree-veh-DEHR-chee",
+    translation: "Goodbye (formal/semi-formal)",
+    category: "Social",
+    module: 7,
+    tip: "Standard respectful goodbye when leaving stores, taxi rides, or hotels."
+  },
+  {
+    id: 71,
+    phrase: "Non mi sento bene",
+    phonetic: "nohn mee SEHN-toh BEH-neh",
+    translation: "I don't feel well",
+    category: "Medical",
+    module: 8,
+    tip: "Use this to alert guides, hotel reception, or medical staff."
+  },
+  {
+    id: 72,
+    phrase: "Ho mal di testa / stomaco",
+    phonetic: "oh mahl dee TEHS-tah / STOH-mah-koh",
+    translation: "I have a headache / stomach ache",
+    category: "Medical",
+    module: 8,
+    tip: "Helpful symptoms to describe at the farmacia to receive the correct OTC medicine."
+  },
+  {
+    id: 73,
+    phrase: "Ha un medicinale per...?",
+    phonetic: "ah oon meh-dee-chee-NAH-leh pehr...?",
+    translation: "Do you have a medicine for...?",
+    category: "Medical",
+    module: 8,
+    tip: "Ask the pharmacist directly using this structure."
+  },
+  {
+    id: 74,
+    phrase: "la tosse / il raffreddore",
+    phonetic: "lah TOHS-seh / eel rahf-red-DOH-reh",
+    translation: "cough / cold",
+    category: "Medical",
+    module: 8,
+    tip: "E.g., 'medicinale per la tosse' (cough medicine)."
+  },
+  {
+    id: 75,
+    phrase: "C'è un medico qui?",
+    phonetic: "cheh oon MEH-dee-koh kwee?",
+    translation: "Is there a doctor here?",
+    category: "Medical",
+    module: 8,
+    tip: "Ask hotel staff or public venue customer desks in case of sudden illness."
+  },
+  {
+    id: 76,
+    phrase: "Ho un'allergia a...",
+    phonetic: "oh oon-ahl-lehr-JEE-ah ah...",
+    translation: "I have an allergy to...",
+    category: "Medical",
+    module: 8,
+    tip: "Add allergen: 'arachidi' (peanuts), 'lattosio' (lactose), or 'penicillina' (penicillin)."
+  },
+  {
+    id: 77,
+    phrase: "È grave?",
+    phonetic: "eh GRAH-veh?",
+    translation: "Is it serious?",
+    category: "Medical",
+    module: 8,
+    tip: "Ask the doctor or physician in a clinic."
+  },
+  {
+    id: 78,
+    phrase: "Ho bisogno di un cerotto",
+    phonetic: "oh bee-ZOHN-yoh dee oon cheh-ROHT-toh",
+    translation: "I need a band-aid / plaster",
+    category: "Medical",
+    module: 8,
+    tip: "'Cerotti' are available at pharmacies, supermarkets, and convenience shops."
+  },
+  {
+    id: 79,
+    phrase: "Mi fa male qui",
+    phonetic: "mee fah MAH-leh kwee",
+    translation: "It hurts here",
+    category: "Medical",
+    module: 8,
+    tip: "Point to the location of pain when describing an issue to emergency staff."
+  },
+  {
+    id: 80,
+    phrase: "Chiami un'ambulanza!",
+    phonetic: "KYAH-mee oon-ahm-boo-LAHN-tsah!",
+    translation: "Call an ambulance!",
+    category: "Medical",
+    module: 8,
+    tip: "The medical emergency phone number in Italy (and all of Europe) is 112."
   }
 ];
 
@@ -367,6 +817,11 @@ let state = {
     mod1: 0,
     mod2: 0,
     mod3: 0,
+    mod4: 0,
+    mod5: 0,
+    mod6: 0,
+    mod7: 0,
+    mod8: 0,
     scenario: 0
   }
 };
@@ -431,8 +886,20 @@ function loadState() {
         mod1: 0,
         mod2: 0,
         mod3: 0,
+        mod4: 0,
+        mod5: 0,
+        mod6: 0,
+        mod7: 0,
+        mod8: 0,
         scenario: parsed.quizScore || 0
       };
+      
+      // Ensure new module scores are initialized if they didn't exist in saved state
+      if (state.quizScores.mod4 === undefined) state.quizScores.mod4 = 0;
+      if (state.quizScores.mod5 === undefined) state.quizScores.mod5 = 0;
+      if (state.quizScores.mod6 === undefined) state.quizScores.mod6 = 0;
+      if (state.quizScores.mod7 === undefined) state.quizScores.mod7 = 0;
+      if (state.quizScores.mod8 === undefined) state.quizScores.mod8 = 0;
     } catch (e) {
       console.error("Failed to load saved state", e);
     }
@@ -480,8 +947,10 @@ function updateGlobalProgressUI() {
     elements.statCardsMastered.innerText = `${masteredCount}/${totalCards}`;
   }
   if (elements.statQuizHighscore) {
-    const totalCorrect = state.quizScores.mod1 + state.quizScores.mod2 + state.quizScores.mod3 + state.quizScores.scenario;
-    const maxPossible = 15 + 15 + 15 + 5; // 50 total
+    const totalCorrect = state.quizScores.mod1 + state.quizScores.mod2 + state.quizScores.mod3 + 
+                        state.quizScores.mod4 + state.quizScores.mod5 + state.quizScores.mod6 + 
+                        state.quizScores.mod7 + state.quizScores.mod8 + state.quizScores.scenario;
+    const maxPossible = (15 * 8) + 5; // 125 total
     elements.statQuizHighscore.innerText = `${totalCorrect}/${maxPossible}`;
   }
   
@@ -592,6 +1061,21 @@ function renderFlashcardModule() {
   } else if (state.currentModule === 3) {
     elements.moduleTitle.innerText = "Module 3: Food & Survival Scenarios";
     elements.moduleSubtitle.innerText = "Order coffee and food, request the bill, and express urgent safety/medical requests.";
+  } else if (state.currentModule === 4) {
+    elements.moduleTitle.innerText = "Module 4: Shopping & Money";
+    elements.moduleSubtitle.innerText = "Navigate buying items, asking prices, paying by card, locating ATMs, and requesting receipts.";
+  } else if (state.currentModule === 5) {
+    elements.moduleTitle.innerText = "Module 5: Hotel & Accommodation";
+    elements.moduleSubtitle.innerText = "Interact with hotel desks, check-in, request amenities (Wi-Fi password, towels), and checkout.";
+  } else if (state.currentModule === 6) {
+    elements.moduleTitle.innerText = "Module 6: Transportation & Transit";
+    elements.moduleSubtitle.innerText = "Purchase train or bus tickets, validate tickets, ask for platform tracks, and check schedules.";
+  } else if (state.currentModule === 7) {
+    elements.moduleTitle.innerText = "Module 7: Socializing & Connection";
+    elements.moduleSubtitle.innerText = "Introduce yourself, share your name and nationality, exchange small talk, and say polite farewells.";
+  } else if (state.currentModule === 8) {
+    elements.moduleTitle.innerText = "Module 8: Pharmacy & Medical Needs";
+    elements.moduleSubtitle.innerText = "Explain simple symptoms (headache, cough), ask for doctors, tell allergies, and call emergency services.";
   }
   
   // Update study mode active button styles
@@ -830,6 +1314,56 @@ function renderQuizDashboard() {
           <button class="btn btn-primary start-quiz-btn" data-quiz-type="mod3">Start Quiz</button>
         </div>
       </div>
+
+      <div class="timeline-card">
+        <span class="timeline-badge" style="background:#E8F5E9; color:#2E7D32;">15 Questions</span>
+        <h3>Quiz 4: Shopping</h3>
+        <p>Test your Hour 4 vocabulary. Translating prices, cards, cash checks, and receipts.</p>
+        <div class="timeline-meta" style="margin-top:auto; padding-top:16px;">
+          <span>🏆 High Score: ${state.quizScores.mod4}/15</span>
+          <button class="btn btn-primary start-quiz-btn" data-quiz-type="mod4">Start Quiz</button>
+        </div>
+      </div>
+
+      <div class="timeline-card">
+        <span class="timeline-badge" style="background:#E8F5E9; color:#2E7D32;">15 Questions</span>
+        <h3>Quiz 5: Hotel</h3>
+        <p>Test your Hour 5 vocabulary. Translating check-ins, Wi-Fi password, and checkout requests.</p>
+        <div class="timeline-meta" style="margin-top:auto; padding-top:16px;">
+          <span>🏆 High Score: ${state.quizScores.mod5}/15</span>
+          <button class="btn btn-primary start-quiz-btn" data-quiz-type="mod5">Start Quiz</button>
+        </div>
+      </div>
+
+      <div class="timeline-card">
+        <span class="timeline-badge" style="background:#E8F5E9; color:#2E7D32;">15 Questions</span>
+        <h3>Quiz 6: Transit</h3>
+        <p>Test your Hour 6 vocabulary. Translating train tickets, validation, and platforms.</p>
+        <div class="timeline-meta" style="margin-top:auto; padding-top:16px;">
+          <span>🏆 High Score: ${state.quizScores.mod6}/15</span>
+          <button class="btn btn-primary start-quiz-btn" data-quiz-type="mod6">Start Quiz</button>
+        </div>
+      </div>
+
+      <div class="timeline-card">
+        <span class="timeline-badge" style="background:#E8F5E9; color:#2E7D32;">15 Questions</span>
+        <h3>Quiz 7: Social</h3>
+        <p>Test your Hour 7 vocabulary. Translating introductions, country tags, and farewells.</p>
+        <div class="timeline-meta" style="margin-top:auto; padding-top:16px;">
+          <span>🏆 High Score: ${state.quizScores.mod7}/15</span>
+          <button class="btn btn-primary start-quiz-btn" data-quiz-type="mod7">Start Quiz</button>
+        </div>
+      </div>
+
+      <div class="timeline-card">
+        <span class="timeline-badge" style="background:#E8F5E9; color:#2E7D32;">15 Questions</span>
+        <h3>Quiz 8: Medical</h3>
+        <p>Test your Hour 8 vocabulary. Translating physical symptoms, clinic checks, and responders.</p>
+        <div class="timeline-meta" style="margin-top:auto; padding-top:16px;">
+          <span>🏆 High Score: ${state.quizScores.mod8}/15</span>
+          <button class="btn btn-primary start-quiz-btn" data-quiz-type="mod8">Start Quiz</button>
+        </div>
+      </div>
       
       <div class="timeline-card" style="border-left: 5px solid var(--accent-terracotta);">
         <span class="timeline-badge" style="background:var(--accent-terracotta-light); color:var(--accent-terracotta);">5 Scenarios</span>
@@ -865,6 +1399,16 @@ function startQuiz(quizType) {
     state.currentQuizQuestions = generateQuizForModule(2);
   } else if (quizType === 'mod3') {
     state.currentQuizQuestions = generateQuizForModule(3);
+  } else if (quizType === 'mod4') {
+    state.currentQuizQuestions = generateQuizForModule(4);
+  } else if (quizType === 'mod5') {
+    state.currentQuizQuestions = generateQuizForModule(5);
+  } else if (quizType === 'mod6') {
+    state.currentQuizQuestions = generateQuizForModule(6);
+  } else if (quizType === 'mod7') {
+    state.currentQuizQuestions = generateQuizForModule(7);
+  } else if (quizType === 'mod8') {
+    state.currentQuizQuestions = generateQuizForModule(8);
   } else if (quizType === 'scenario') {
     state.currentQuizQuestions = quizQuestions; // static scenario questions
   }

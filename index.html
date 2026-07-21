@@ -49,7 +49,7 @@
     <section id="flight-plan" class="tab-content active" role="tabpanel">
       <div class="flight-plan-hero">
         <h1>Benvenuto in Italia!</h1>
-        <p>You're leaving in 2 days. This interactive web app is your 3-hour crash course to navigate Italy with confidence. Master greetings, directions, café ordering, and safety essentials in three short blocks.</p>
+        <p>You're leaving in 2 days. This interactive web app is your 8-hour crash course to navigate Italy with confidence. Master greetings, directions, dining, accommodation, transit, socializing, and medical essentials in eight structured blocks.</p>
         
         <!-- Quick Summary Stats -->
         <div class="flight-plan-stats">
@@ -58,18 +58,18 @@
             <span class="stat-lbl">Course Progress</span>
           </div>
           <div class="stat-item">
-            <span class="stat-val" id="stat-cards-mastered">0/30</span>
+            <span class="stat-val" id="stat-cards-mastered">0/80</span>
             <span class="stat-lbl">Phrases Mastered</span>
           </div>
           <div class="stat-item">
-            <span class="stat-val" id="stat-quiz-highscore">0/5</span>
+            <span class="stat-val" id="stat-quiz-highscore">0/125</span>
             <span class="stat-lbl">Quiz High Score</span>
           </div>
         </div>
       </div>
 
       <!-- Course timeline/modules -->
-      <h2 style="font-family: var(--font-serif); margin-bottom: 24px; font-size: 1.8rem; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">Your 3-Hour Roadmap</h2>
+      <h2 style="font-family: var(--font-serif); margin-bottom: 24px; font-size: 1.8rem; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">Your 8-Hour Roadmap</h2>
       
       <div class="timeline">
         <!-- Module 1 Card -->
@@ -104,6 +104,61 @@
             <button class="btn btn-primary start-module-btn" data-module="3">Study Cards</button>
           </div>
         </div>
+
+        <!-- Module 4 Card -->
+        <div class="timeline-card" id="timeline-mod4">
+          <span class="timeline-badge">Module 4</span>
+          <h3>Hour 4: Shopping &amp; Money</h3>
+          <p>Shop at local markets and stores with confidence. Ask for prices, request discounts, pay by card, and get ATMs or receipts.</p>
+          <div class="timeline-meta">
+            <span>⏱️ 60 Mins</span>
+            <button class="btn btn-primary start-module-btn" data-module="4">Study Cards</button>
+          </div>
+        </div>
+
+        <!-- Module 5 Card -->
+        <div class="timeline-card" id="timeline-mod5">
+          <span class="timeline-badge">Module 5</span>
+          <h3>Hour 5: Hotel &amp; Accommodation</h3>
+          <p>Handle check-in and checkout smoothly. Request room amenities (Wi-Fi, towels), leave bags for storage, and report room concerns.</p>
+          <div class="timeline-meta">
+            <span>⏱️ 60 Mins</span>
+            <button class="btn btn-primary start-module-btn" data-module="5">Study Cards</button>
+          </div>
+        </div>
+
+        <!-- Module 6 Card -->
+        <div class="timeline-card" id="timeline-mod6">
+          <span class="timeline-badge">Module 6</span>
+          <h3>Hour 6: Transportation &amp; Transit</h3>
+          <p>Buy train and bus tickets, find departing platforms, understand connection details, and learn critical ticket validation rules.</p>
+          <div class="timeline-meta">
+            <span>⏱️ 60 Mins</span>
+            <button class="btn btn-primary start-module-btn" data-module="6">Study Cards</button>
+          </div>
+        </div>
+
+        <!-- Module 7 Card -->
+        <div class="timeline-card" id="timeline-mod7">
+          <span class="timeline-badge">Module 7</span>
+          <h3>Hour 7: Socializing &amp; Connection</h3>
+          <p>Introduce yourself, share where you are from, ask names, exchange basic warm greetings, and say respectful goodbyes.</p>
+          <div class="timeline-meta">
+            <span>⏱️ 60 Mins</span>
+            <button class="btn btn-primary start-module-btn" data-module="7">Study Cards</button>
+          </div>
+        </div>
+
+        <!-- Module 8 Card -->
+        <div class="timeline-card" id="timeline-mod8">
+          <span class="timeline-badge">Module 8</span>
+          <h3>Hour 8: Pharmacy &amp; Medical Needs</h3>
+          <p>Explain physical symptoms or allergies at a pharmacy, ask for simple items (band-aids), request a doctor, or call an ambulance.</p>
+          <div class="timeline-meta">
+            <span>⏱️ 60 Mins</span>
+            <button class="btn btn-primary start-module-btn" data-module="8">Study Cards</button>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -128,6 +183,31 @@
             <li class="sidebar-item">
               <a href="#" class="sidebar-link" data-module="3">
                 <span>Module 3: Food &amp; Help</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link" data-module="4">
+                <span>Module 4: Shopping</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link" data-module="5">
+                <span>Module 5: Hotel</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link" data-module="6">
+                <span>Module 6: Transit</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link" data-module="7">
+                <span>Module 7: Social</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a href="#" class="sidebar-link" data-module="8">
+                <span>Module 8: Medical</span>
               </a>
             </li>
           </ul>
